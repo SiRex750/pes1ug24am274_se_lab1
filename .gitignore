@@ -1,0 +1,10 @@
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# PlantUML render output (regenerate from the .puml source)
+plantuml.jar
+*.png

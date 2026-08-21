@@ -1,0 +1,63 @@
+@startuml Smart_Lab_Equipment_Slot_Reservation_Portal
+' UML Use-Case Diagram
+' Problem Statement #01 - Smart Lab Equipment & Slot Reservation Portal
+' Render: java -jar plantuml.jar 02_use_case_diagram.puml   (or https://www.plantuml.com/plantuml)
+
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam usecase {
+  BackgroundColor #F3F6FB
+  BorderColor #33507A
+}
+skinparam actor {
+  BorderColor #33507A
+}
+
+actor "Student"        as ST
+actor "Lab Technician" as LT
+actor "Institute IdP\n(SSO)"        as IDP
+actor "Notification\nService"       as NS
+
+rectangle "Smart Lab Equipment & Slot Reservation Portal" {
+
+  usecase "Authenticate User"            as UC0
+  usecase "Browse Equipment Catalogue"   as UC1
+  usecase "Reserve Equipment Slot"       as UC2
+  usecase "Verify Calibration Status"    as UC3
+  usecase "Join Waitlist"                as UC4
+  usecase "Cancel Reservation"           as UC5
+  usecase "Check Out Equipment"          as UC6
+  usecase "Return Equipment"             as UC7
+  usecase "Apply Late-Return Penalty"    as UC8
+  usecase "Manage Equipment Catalogue"   as UC9
+  usecase "Log Calibration / Maintenance" as UC10
+  usecase "Notify Stakeholders"          as UC11
+
+  ' --- Student associations ---
+  ST -- UC1
+  ST -- UC2
+  ST -- UC5
+  ST -- UC6
+  ST -- UC7
+
+  ' --- Lab Technician associations ---
+  LT -- UC9
+  LT -- UC10
+  LT -- UC6
+  LT -- UC7
+
+  ' --- Secondary actors ---
+  UC0  -- IDP
+  UC11 -- NS
+
+  ' --- include relationships ---
+  UC2  ..> UC0  : <<include>>
+  UC2  ..> UC3  : <<include>>
+  UC10 ..> UC11 : <<include>>
+
+  ' --- extend relationships ---
+  UC4 ..> UC2 : <<extend>>\n(no free slot)
+  UC8 ..> UC7 : <<extend>>\n(return delay > 15 min)
+}
+@enduml

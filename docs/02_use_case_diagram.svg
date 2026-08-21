@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 800" width="1120" height="800" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs>
+<marker id="open" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto">
+<path d="M1,1 L10,5 L1,9" fill="none" stroke="#33507A" stroke-width="1.6"/></marker>
+</defs>
+<rect x="0" y="0" width="1120" height="800" fill="#ffffff"/>
+<rect x="210" y="60" width="670" height="680" rx="10" fill="none" stroke="#33507A" stroke-width="2"/>
+<text x="545" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#1c2a3f">Smart Lab Equipment &amp; Slot Reservation Portal</text>
+<ellipse cx="360" cy="120" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="360" y="116" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Browse Equipment</text>
+<text x="360" y="134" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Catalogue</text>
+<ellipse cx="360" cy="210" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="360" y="206" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Reserve Equipment</text>
+<text x="360" y="224" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Slot</text>
+<ellipse cx="360" cy="300" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="360" y="305" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Cancel Reservation</text>
+<ellipse cx="360" cy="390" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="360" y="395" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Check Out Equipment</text>
+<ellipse cx="360" cy="480" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="360" y="485" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Return Equipment</text>
+<ellipse cx="360" cy="590" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="360" y="586" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Manage Equipment</text>
+<text x="360" y="604" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Catalogue</text>
+<ellipse cx="360" cy="680" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="360" y="676" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Log Calibration /</text>
+<text x="360" y="694" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Maintenance</text>
+<ellipse cx="700" cy="120" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="700" y="125" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Authenticate User</text>
+<ellipse cx="700" cy="210" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="700" y="206" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Verify Calibration</text>
+<text x="700" y="224" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Status</text>
+<ellipse cx="700" cy="300" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="700" y="305" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Join Waitlist</text>
+<ellipse cx="700" cy="480" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="700" y="476" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Apply Late-Return</text>
+<text x="700" y="494" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Penalty</text>
+<ellipse cx="700" cy="680" rx="100" ry="34" fill="#F3F6FB" stroke="#33507A" stroke-width="1.8"/>
+<text x="700" y="685" text-anchor="middle" font-size="13.5" fill="#1c2a3f">Notify Stakeholders</text>
+<g stroke="#33507A" stroke-width="1.8" fill="none"><circle cx="105" cy="246" r="11" fill="#ffffff"/><line x1="105" y1="257" x2="105" y2="286"/><line x1="87" y1="268" x2="123" y2="268"/><line x1="105" y1="286" x2="90" y2="310"/><line x1="105" y1="286" x2="120" y2="310"/></g>
+<text x="105" y="330" text-anchor="middle" font-size="14" font-weight="600" fill="#1c2a3f">Student</text>
+<g stroke="#33507A" stroke-width="1.8" fill="none"><circle cx="105" cy="586" r="11" fill="#ffffff"/><line x1="105" y1="597" x2="105" y2="626"/><line x1="87" y1="608" x2="123" y2="608"/><line x1="105" y1="626" x2="90" y2="650"/><line x1="105" y1="626" x2="120" y2="650"/></g>
+<text x="105" y="670" text-anchor="middle" font-size="14" font-weight="600" fill="#1c2a3f">Lab</text>
+<text x="105" y="686" text-anchor="middle" font-size="14" font-weight="600" fill="#1c2a3f">Technician</text>
+<g stroke="#33507A" stroke-width="1.8" fill="none"><circle cx="1010" cy="86" r="11" fill="#ffffff"/><line x1="1010" y1="97" x2="1010" y2="126"/><line x1="992" y1="108" x2="1028" y2="108"/><line x1="1010" y1="126" x2="995" y2="150"/><line x1="1010" y1="126" x2="1025" y2="150"/></g>
+<text x="1010" y="170" text-anchor="middle" font-size="14" font-weight="600" fill="#1c2a3f">Institute IdP</text>
+<text x="1010" y="186" text-anchor="middle" font-size="14" font-weight="600" fill="#1c2a3f">(SSO)</text>
+<g stroke="#33507A" stroke-width="1.8" fill="none"><circle cx="1010" cy="646" r="11" fill="#ffffff"/><line x1="1010" y1="657" x2="1010" y2="686"/><line x1="992" y1="668" x2="1028" y2="668"/><line x1="1010" y1="686" x2="995" y2="710"/><line x1="1010" y1="686" x2="1025" y2="710"/></g>
+<text x="1010" y="730" text-anchor="middle" font-size="14" font-weight="600" fill="#1c2a3f">Notification</text>
+<text x="1010" y="746" text-anchor="middle" font-size="14" font-weight="600" fill="#1c2a3f">Service</text>
+<line x1="125" y1="290" x2="260" y2="120" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="125" y1="290" x2="260" y2="210" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="125" y1="290" x2="260" y2="300" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="125" y1="290" x2="260" y2="390" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="125" y1="290" x2="260" y2="480" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="125" y1="630" x2="262" y2="592" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="125" y1="630" x2="262" y2="678" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="125" y1="630" x2="264" y2="398" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="125" y1="630" x2="264" y2="488" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="990" y1="130" x2="800" y2="120" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="990" y1="690" x2="800" y2="680" stroke="#5a6b85" stroke-width="1.4"/>
+<line x1="455" y1="197" x2="600" y2="130" stroke="#33507A" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="520" y="148" text-anchor="middle" font-size="12" font-style="italic" fill="#33507A">&#171;include&#187;</text>
+<line x1="460" y1="210" x2="600" y2="210" stroke="#33507A" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="530" y="200" text-anchor="middle" font-size="12" font-style="italic" fill="#33507A">&#171;include&#187;</text>
+<line x1="460" y1="680" x2="600" y2="680" stroke="#33507A" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="530" y="670" text-anchor="middle" font-size="12" font-style="italic" fill="#33507A">&#171;include&#187;</text>
+<line x1="600" y1="292" x2="462" y2="222" stroke="#33507A" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="532" y="272" text-anchor="middle" font-size="12" font-style="italic" fill="#33507A">&#171;extend&#187;</text>
+<text x="532" y="286" text-anchor="middle" font-size="12" font-style="italic" fill="#33507A">(no free slot)</text>
+<line x1="600" y1="480" x2="460" y2="480" stroke="#33507A" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#open)"/>
+<text x="530" y="458" text-anchor="middle" font-size="12" font-style="italic" fill="#33507A">&#171;extend&#187;</text>
+<text x="530" y="472" text-anchor="middle" font-size="12" font-style="italic" fill="#33507A">(delay &gt; 15 min)</text>
+</svg>
