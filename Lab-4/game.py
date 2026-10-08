@@ -12,7 +12,14 @@ KEY_HOPS = {pygame.K_LEFT: (-1, -1), pygame.K_UP: (-1, 0), pygame.K_DOWN: (1, 0)
 
 def cube_palette(level):
     """Return a list of TARGET + 1 (r, g, b) colours for the cube stages, or None for the default."""
-    pass
+    palettes = [
+        DEFAULT_PALETTE,                                   # level 1: blue -> brown -> green
+        [(200, 80, 160), (240, 200, 60), (60, 200, 220)],  # level 2: magenta -> yellow -> cyan
+        [(110, 110, 120), (230, 120, 40), (250, 250, 250)],  # level 3: grey -> orange -> white
+        [(60, 140, 70), (150, 90, 200), (240, 90, 90)],    # level 4: green -> purple -> red
+    ]
+    palette = palettes[(level - 1) % len(palettes)]  # cycle once levels run past the list
+    return palette if len(palette) == TARGET + 1 else None
 
 
 def on_cube_completed(cell):
