@@ -8,34 +8,36 @@ HOP_TIME, HOP_HEIGHT = 0.28, 26
 CELLS = {(r, c) for r in range(ROWS) for c in range(r + 1)}
 DEFAULT_PALETTE = [(90, 160, 220), (190, 120, 70), (100, 210, 140)]
 KEY_HOPS = {pygame.K_LEFT: (-1, -1), pygame.K_UP: (-1, 0), pygame.K_DOWN: (1, 0), pygame.K_RIGHT: (1, 1)}
-FLASH_TIME = 0.4  # seconds a freshly completed cube flashes white
-FLASHES = {}      # cell -> seconds of flash remaining
+FLASH_TIME = 0.4
+FLASHES = {}  # cell -> remaining flash time in seconds
 
 
 def cube_palette(level):
     """Return a list of TARGET + 1 (r, g, b) colours for the cube stages, or None for the default."""
     palettes = [
-        DEFAULT_PALETTE,                                   # level 1: blue -> brown -> green
-        [(200, 80, 160), (240, 200, 60), (60, 200, 220)],  # level 2: magenta -> yellow -> cyan
-        [(110, 110, 120), (230, 120, 40), (250, 250, 250)],  # level 3: grey -> orange -> white
-        [(60, 140, 70), (150, 90, 200), (240, 90, 90)],    # level 4: green -> purple -> red
+        DEFAULT_PALETTE,
+        [(200, 80, 90), (230, 180, 60), (250, 240, 200)],
+        [(70, 70, 160), (150, 90, 200), (240, 120, 200)],
+        [(60, 140, 120), (220, 140, 60), (250, 220, 90)],
+        [(110, 110, 110), (80, 180, 230), (240, 240, 240)],
     ]
-    palette = palettes[(level - 1) % len(palettes)]  # cycle once levels run past the list
-    return palette if len(palette) == TARGET + 1 else None
+    palette = palettes[(level - 1) % len(palettes)]
+    if len(palette) != TARGET + 1:
+        return None
+    return palette
 
 
 def on_cube_completed(cell):
     """Called when a cube first reaches its target colour; add a flash, sound, or bonus here."""
-    FLASHES[cell] = FLASH_TIME  # Game.update counts this down, draw_cube renders it
+    FLASHES[cell] = FLASH_TIME
 
 
 def bonus_life_threshold():
     """Return a score value at which the player earns an extra life, or None to disable bonus lives."""
-    return 1000  # one extra life at 1000, 2000, 3000, ...
+    return 1000
 
 
 def cube_center(row, col):
-    # Each row is shifted left by half a cube per row; true division keeps odd rows centred.
     return pygame.Vector2(WIDTH / 2 + (col - row / 2) * CUBE_W, 90 + row * CUBE_H)
 
 
@@ -96,8 +98,8 @@ class Game:
         if full:
             self.level, self.score, self.lives = 1, 0, 3
             self.bonus_awarded = 0
-        self.stages = {cell: 0 for cell in CELLS}
         FLASHES.clear()
+        self.stages = {cell: 0 for cell in CELLS}
         self.state = "play"
         self.respawn()
 
@@ -138,10 +140,10 @@ class Game:
             self.respawn()
 
     def update(self, dt):
-        for cell in list(FLASHES):
-            FLASHES[cell] -= dt
-            if FLASHES[cell] <= 0:
-                del FLASHES[cell]
+        for c in list(FLASHES):
+            FLASHES[c] -= dt
+            if FLASHES[c] <= 0:
+                del FLASHES[c]
         if self.state != "play":
             return
         landed = self.player.update(dt)
@@ -182,9 +184,9 @@ class Game:
         cx, cy = cube_center(*cell)
         top = [(cx, cy - CUBE_H / 2), (cx + CUBE_W / 2, cy), (cx, cy + CUBE_H / 2), (cx - CUBE_W / 2, cy)]
         color = colors[self.stages[cell]]
-        if cell in FLASHES:  # blend toward white, fading out over FLASH_TIME
+        if cell in FLASHES:
             k = FLASHES[cell] / FLASH_TIME
-            color = tuple(int(c + (255 - c) * k) for c in color)
+            color = tuple(int(v + (255 - v) * k) for v in color)
         left = [top[3], top[2], (cx, cy + CUBE_H / 2 + SIDE), (cx - CUBE_W / 2, cy + SIDE)]
         right = [top[1], top[2], (cx, cy + CUBE_H / 2 + SIDE), (cx + CUBE_W / 2, cy + SIDE)]
         pygame.draw.polygon(screen, shade(DEFAULT_PALETTE[0], 0.45), left)
