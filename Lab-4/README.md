@@ -89,3 +89,12 @@ Submission is only the following three things:
 - [] A 10-second video of gameplay **before** your changes, showing the bug/broken behavior
 - [] A 10-second video of gameplay **after** your changes, showing the bug fixed and the new features working
 - [] The Chat/LLM used page link, with the complete chat history
+
+---
+
+## Lab 4 Submission — Siddanth Anil (PES1UG24AM274, Section E)
+
+- **Before video:** [`videos/before.mp4`](videos/before.mp4) — skewed pyramid (original build)
+- **After video:** [`videos/after.mp4`](videos/after.mp4) — symmetric pyramid, completion flash, bonus life at 1000, per-level palettes
+- **Updated code:** [`game.py`](game.py)
+- **LLM chat (Claude):** https://claude.ai/share/a1902cea-9e34-48af-baa3-71c77909cab9 — exported as [`PES1UG24AM274_E_Lab4_chat.pdf`](PES1UG24AM274_E_Lab4_chat.pdf)
