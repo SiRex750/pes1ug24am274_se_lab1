@@ -28,7 +28,7 @@ def advanceStatus(trackingId):
 
 
 def shippingCost(weightKg):
-    cost=50
+    cost = 50
     if weightKg > 1:
         cost += (weightKg - 1) * 30
     return round(cost, 2)
@@ -87,9 +87,12 @@ def main():
         print(trackParcel(trackingId))
         print("  with courier:", isWithCourier(trackingId))
         print("  cost:", shippingCost(parcels[trackingId]["weight"]))
-    print(trackParcel("TRK00000")) # unknown id
+    print(trackParcel("TRK00000"))  # unknown id
     # secrets (CSPRNG) instead of random: an OTP must be unpredictable.
     delivery_otp = 1000 + secrets.randbelow(9000)  # 1000..9999 inclusive
     print("Delivery OTP for", third, "is", delivery_otp)
-    print("Parcels booked today:",len(parcels))
-main()
+    print("Parcels booked today:", len(parcels))
+
+
+if __name__ == "__main__":
+    main()
